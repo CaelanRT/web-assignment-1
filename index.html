@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css" type=""text/css>
   </head>
   <body>
     <!-- navbar -->
@@ -16,27 +16,46 @@
     </nav>
 
     <!-- content area -->
-    <main>
-      <h1>Andrew <u>Caelan</u> Roberge-Toll</h1>
-      <img src="./images/my-photo.jpg" alt="a photo of Caelan" />
-      <article>
+    <main class="main-container">
+      <!-- header -->
+      <header id="main-header">
+        <h1>Andrew <u>Caelan</u> Roberge-Toll</h1>
+      </header>
+
+      <!-- image -->
+      <article id="main-image">
+        <img src="./images/my-photo.jpg" alt="a photo of Caelan" />
+      </article>
+
+      <!-- aside -->
+      <aside id="main-content">
         <p>
           I am a <b>Software Engineer</b> and <b>Musician</b> from Ottawa,
           Ontario. I am currently pursuing a
-          <b>Diploma in Computer Programming</b> from <b>Algonquin College</b>.
-          I love technology and enjoy building products that delight users.
+          <a
+            href="https://www.algonquincollege.com/sat/program/computer-programming/"
+            id="cp-link"
+            >Diploma in Computer Programming</a
+          >
+          from <b>Algonquin College</b>. I love technology and enjoy building
+          products that delight users.
         </p>
         <p>My <b>hobbies</b> include:</p>
         <ul>
           <li>Writing <b>Software</b></li>
           <li>Making <b>Music</b></li>
-          <li>Painting <b>Watercolour</b></li>
+          <li>Painting <b>Watercolor</b></li>
           <li><b>Cooking</b></li>
         </ul>
-      </article>
+      </aside>
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <a href="./index.html">Home</a>
+      <a href="./resume.html">Resume</a>
+      <a href="./Projects.html">Projects</a>
+      <a href="./Contact.html">Contact</a>
+    </footer>
   </body>
 </html>

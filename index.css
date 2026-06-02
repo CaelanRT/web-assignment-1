@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#main-header {
+  padding-top: 30px;
+  background-color: blue;
+  grid-column: 1/13;
+  display: grid;
+}
+
+#main-header h1 {
+  color: red;
+  grid-column: 5 / 9;
+}
+
+#main-image {
+  grid-column: 2 / 7;
+  grid-row: 2/4;
+}
+
+#main-content {
+  grid-template-columns: 8 / 13;
+  grid-row: 2/4;
+}
