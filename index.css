@@ -17,6 +17,7 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  min-height: 100dvh;
 }
 
 .navbar {
@@ -82,4 +83,12 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-top: 20px;
+}
+
+.footer {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: auto;
+  border-top: 1px solid #dddddd;
 }
