@@ -17,11 +17,13 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  min-height: 100dvh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  margin-bottom: 10px;
+  flex: 1;
 }
 
 .navbar {
@@ -49,7 +51,7 @@ main {
   text-decoration-color: #f99006;
 }
 
-#main-header {
+.main-header {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
