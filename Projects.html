@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="./javascript/script.js" defer></script>
   </head>
   <body>
     <!-- navbar -->
@@ -25,19 +26,24 @@
 
       <section id="projects-container">
         <div id="project-details">
-          <h3>TechnicianOS</h3>
-          <p>
+          <h3 id="project-title">TechnicianOS</h3>
+          <p id="project-description">
             A REST API backend written in Javascript for managing the tasks
             required of any technical implementation work.
           </p>
-          <p>February 2026</p>
-          <p>Node.JS, Express, SQLite, PrismaORM</p>
+          <p id="project-date">February 2026</p>
+          <p id="project-tech">Node.JS, Express, SQLite, PrismaORM</p>
         </div>
-        <div id="project-image">
+        <div id="project-image-div">
           <img
             src="./images/TechnicianOS-Mockup.png"
-            alt="mockup of the technicianOS frontend"
+            alt="project pictures"
+            id="project-img"
           />
+        </div>
+        <div id="project-button">
+          <button id="previous">Previous</button>
+          <button id="next">Next</button>
         </div>
       </section>
     </main>

@@ -22,6 +22,34 @@
       <header class="main-header">
         <h1>Contact</h1>
       </header>
+
+      <section>
+        <form action="GET">
+          <label for="name" required>Name:</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="johndoe@test.com"
+          />
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Hello World"
+          />
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Hello World!"
+          ></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </section>
     </main>
 
     <!-- footer -->
