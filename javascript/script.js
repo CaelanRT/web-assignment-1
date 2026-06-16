@@ -1,3 +1,10 @@
+/* 
+Name: Andrew Caelan Roberge-Toll
+Student Number: 041041131
+Class: CST 8326 Web Programming
+Assignment: Assignment 1
+*/
+
 // getting html elements for projects.html page
 let projectTitle = document.querySelector("#project-title");
 let projectDescription = document.querySelector("#project-description");
@@ -102,8 +109,8 @@ if (!projectContainer) {
     const successMessage = document.createElement("p");
     successMessage.textContent = "Message Successfully Sent!";
 
+    // getting the parent element
     const formWrapper = document.querySelector("#form-wrapper");
-
     formWrapper.appendChild(successMessage);
 
     // setting a timeout for 5 seconds then clearing the message
