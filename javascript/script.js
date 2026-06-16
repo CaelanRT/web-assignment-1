@@ -1,3 +1,4 @@
+// getting html elements for projects.html page
 let projectTitle = document.querySelector("#project-title");
 let projectDescription = document.querySelector("#project-description");
 let projectDate = document.querySelector("#project-date");
@@ -5,7 +6,12 @@ let projectTech = document.querySelector("#project-tech");
 let projectImage = document.querySelector("#project-img");
 const forwardButton = document.querySelector("#next");
 const backButton = document.querySelector("#previous");
+const projectContainer = document.querySelector("#projects-container");
 
+// getting html elements for contact.html page
+const contactForm = document.querySelector("form");
+
+// Projects object with project data
 const projects = [
   {
     title: "TechnicianOS",
@@ -41,38 +47,68 @@ const projects = [
   },
 ];
 
-let index = 0;
+// set project state
+if (!contactForm) {
+  // index counter
+  let index = 0;
 
-projectTitle.textContent = projects[index].title;
-projectDescription.textContent = projects[index].description;
-projectDate.textContent = projects[index].date;
-projectTech.textContent = projects[index].tech;
-projectImage.src = projects[index].image;
+  // set project state
 
-forwardButton.addEventListener("click", () => {
-  ++index;
-
-  if (index == projects.length) {
-    index = 0;
-  }
-
+  //setting initial state of content
   projectTitle.textContent = projects[index].title;
   projectDescription.textContent = projects[index].description;
   projectDate.textContent = projects[index].date;
   projectTech.textContent = projects[index].tech;
   projectImage.src = projects[index].image;
-});
 
-backButton.addEventListener("click", () => {
-  --index;
+  // forward button event listener
+  forwardButton.addEventListener("click", () => {
+    ++index;
 
-  if (index < 0) {
-    index = projects.length - 1;
-  }
+    if (index == projects.length) {
+      index = 0;
+    }
 
-  projectTitle.textContent = projects[index].title;
-  projectDescription.textContent = projects[index].description;
-  projectDate.textContent = projects[index].date;
-  projectTech.textContent = projects[index].tech;
-  projectImage.src = projects[index].image;
-});
+    projectTitle.textContent = projects[index].title;
+    projectDescription.textContent = projects[index].description;
+    projectDate.textContent = projects[index].date;
+    projectTech.textContent = projects[index].tech;
+    projectImage.src = projects[index].image;
+  });
+
+  // back button event listener
+  backButton.addEventListener("click", () => {
+    --index;
+
+    if (index < 0) {
+      index = projects.length - 1;
+    }
+
+    projectTitle.textContent = projects[index].title;
+    projectDescription.textContent = projects[index].description;
+    projectDate.textContent = projects[index].date;
+    projectTech.textContent = projects[index].tech;
+    projectImage.src = projects[index].image;
+  });
+}
+
+if (!projectContainer) {
+  // displaying submitted message
+  contactForm.addEventListener("submit", (e) => {
+    // preventing default behaviour
+    e.preventDefault();
+
+    // setting the message
+    const successMessage = document.createElement("p");
+    successMessage.textContent = "Message Successfully Sent!";
+
+    const formWrapper = document.querySelector("#form-wrapper");
+
+    formWrapper.appendChild(successMessage);
+
+    // setting a timeout for 5 seconds then clearing the message
+    setTimeout(() => {
+      formWrapper.removeChild(successMessage);
+    }, 5000);
+  });
+}
