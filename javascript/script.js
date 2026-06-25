@@ -14,6 +14,10 @@ let projectImage = document.querySelector("#project-img");
 const forwardButton = document.querySelector("#next");
 const backButton = document.querySelector("#previous");
 const projectContainer = document.querySelector("#projects-container");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const subjectInput = document.querySelector("#subject");
+const messageInput = document.querySelector("#message");
 
 // getting html elements for contact.html page
 const contactForm = document.querySelector("form");
@@ -105,6 +109,8 @@ if (!projectContainer) {
     // preventing default behaviour
     e.preventDefault();
 
+    // this is where I would post to the server if we had a backend!
+
     // setting the message
     const successMessage = document.createElement("p");
     successMessage.textContent = "Message Successfully Sent!";
@@ -116,6 +122,10 @@ if (!projectContainer) {
     // setting a timeout for 5 seconds then clearing the message
     setTimeout(() => {
       formWrapper.removeChild(successMessage);
+      nameInput.value = "";
+      emailInput.value = "";
+      subjectInput.value = "";
+      messageInput.value = "";
     }, 5000);
   });
 }
