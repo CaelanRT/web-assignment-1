@@ -167,10 +167,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
 }
 
 #summary p {
-  width: 300px;
+  max-width: 1000px;
 }
 
 #work-experience {
@@ -178,4 +181,43 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin-top: 25px;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.school {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
 }
